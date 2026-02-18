@@ -1,0 +1,11 @@
+{
+  "name": "landmark-blog",
+  "version": "1.0.0",
+  "description": "Landmark Bets Blog - Sports betting education and strategy",
+  "scripts": {
+    "build": "node generate-sitemap.js",
+    "sitemap": "node generate-sitemap.js"
+  },
+  "author": "Landmark Bets",
+  "license": "MIT"
+}
