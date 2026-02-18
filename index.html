@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landmark Bets Blog - Expert Sports Betting Strategy & Analysis</title>
+    <meta name="description" content="Master sports betting with expert insights on Expected Value (EV), line shopping, bankroll management, and proven strategies from professional bettors.">
+    <meta name="keywords" content="sports betting, expected value, EV betting, line shopping, bankroll management, betting strategy">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Landmark Bets Blog - Expert Sports Betting Strategy">
+    <meta property="og:description" content="Master sports betting with expert insights on Expected Value, line shopping, and proven strategies.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&auto=format&fit=crop">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landmark Bets Blog - Expert Sports Betting Strategy">
+    <meta name="twitter:description" content="Master sports betting with expert insights on Expected Value, line shopping, and proven strategies.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .blog-header p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.2);
+            border-color: #FF6B35;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 24px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .article-category {
+            background: #FF6B35;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .article-date {
+            color: #999;
+        }
+
+        .article-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .read-time {
+            font-size: 14px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .read-more {
+            color: #FF6B35;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            gap: 10px;
+        }
+
+        .featured-badge {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #FF6B35;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 36px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .cta-section {
+                padding: 40px 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>📚 Betting Knowledge Hub</h1>
+            <p>Master the fundamentals of sharp sports betting with expert insights and proven strategies.</p>
+        </div>
+
+        <div class="articles-grid">
+            <!-- Featured Article: Expected Value -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop" alt="Expected Value in Sports Betting">
+                </div>
+                <div class="article-content">
+                    <div class="featured-badge">⭐ Featured</div>
+                    <div class="article-meta">
+                        <span class="article-category">Strategy</span>
+                        <span class="article-date">Jan 15, 2025</span>
+                    </div>
+                    <h2 class="article-title">What is Expected Value (EV) in Sports Betting?</h2>
+                    <p class="article-excerpt">Learn how professional bettors use Expected Value to identify profitable betting opportunities and build long-term winning strategies.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 5 min read</span>
+                        <a href="ev-betting.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Line Shopping -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1554224311-95d0a71a7efd?w=800&auto=format&fit=crop" alt="Line Shopping Guide">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Fundamentals</span>
+                        <span class="article-date">Jan 12, 2025</span>
+                    </div>
+                    <h2 class="article-title">The Complete Guide to Line Shopping</h2>
+                    <p class="article-excerpt">Discover why line shopping across multiple sportsbooks is the easiest way to increase your profitability without changing your strategy.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 6 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bankroll Management -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop" alt="Bankroll Management">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Money Management</span>
+                        <span class="article-date">Jan 10, 2025</span>
+                    </div>
+                    <h2 class="article-title">Bankroll Management: Protect Your Betting Capital</h2>
+                    <p class="article-excerpt">Learn proven bankroll management techniques that professional bettors use to survive downswings and maximize long-term growth.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 7 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Closing Line Value -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=800&auto=format&fit=crop" alt="Closing Line Value">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Advanced</span>
+                        <span class="article-date">Jan 8, 2025</span>
+                    </div>
+                    <h2 class="article-title">Understanding Closing Line Value (CLV)</h2>
+                    <p class="article-excerpt">Why getting better odds than the closing line is the single best indicator of long-term betting success.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 5 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sharp vs Square -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop" alt="Sharp vs Square Betting">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Education</span>
+                        <span class="article-date">Jan 5, 2025</span>
+                    </div>
+                    <h2 class="article-title">Sharp vs Square: What's the Difference?</h2>
+                    <p class="article-excerpt">Learn the key differences between professional sharp bettors and recreational square bettors, and which habits to adopt.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 4 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Positive EV Betting -->
+            <div class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&auto=format&fit=crop" alt="Positive EV Betting">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Strategy</span>
+                        <span class="article-date">Jan 3, 2025</span>
+                    </div>
+                    <h2 class="article-title">How to Find Positive EV Bets Every Day</h2>
+                    <p class="article-excerpt">A practical guide to identifying and capitalizing on positive expected value betting opportunities in real-time.</p>
+                    <div class="article-footer">
+                        <span class="read-time">📖 8 min read</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>🎯 Ready to Start Betting Smarter?</h2>
+            <p>Join thousands of bettors using Landmark Bets to find positive EV opportunities and gain an edge over the sportsbooks.</p>
+            <a href="/" class="cta-button">Start Free Trial</a>
+        </div>
+    </div>
+
+    <script>
+        // Make entire article cards clickable
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Find the read-more link within this card
+                const link = this.querySelector('.read-more');
+                if (link && link.href && !e.target.closest('.read-more')) {
+                    window.location.href = link.href;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

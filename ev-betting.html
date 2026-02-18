@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Expected Value (EV) in Sports Betting? Complete Guide | Landmark Bets</title>
+    <meta name="description" content="Learn how professional bettors use Expected Value (EV) to identify profitable betting opportunities and build long-term winning strategies. Complete guide with examples.">
+    <meta name="keywords" content="expected value betting, EV sports betting, positive EV, betting strategy, sports betting math, profitable betting">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What is Expected Value (EV) in Sports Betting?">
+    <meta property="og:description" content="Learn how professional bettors use Expected Value to identify profitable betting opportunities and build winning strategies.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&auto=format&fit=crop">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is Expected Value (EV) in Sports Betting?">
+    <meta name="twitter:description" content="Learn how professional bettors use Expected Value to identify profitable betting opportunities."">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .scroll-container {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            background: #f8f9fa;
+        }
+        
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+        
+        .blog-article h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .blog-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #FF6B35;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .content-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .blog-article h2 {
+            font-size: 1.9em;
+            color: #FF6B35;
+            margin-top: 45px;
+            margin-bottom: 15px;
+            border-left: 5px solid #FF6B35;
+            padding-left: 15px;
+        }
+        
+        .blog-article h3 {
+            font-size: 1.4em;
+            color: #2a2a2a;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+        
+        .blog-article p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .blog-article ul, .blog-article ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .blog-article li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+            border-left: 5px solid #FF6B35;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+        }
+        
+        .highlight-box strong {
+            color: #FF6B35;
+            font-size: 1.1em;
+        }
+        
+        .example-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #FF6B35;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .formula {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #FF6B35;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #e55a24;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #FF6B35 0%, #ff8c61 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box .cta-button {
+            background: white;
+            color: #FF6B35;
+            margin-top: 15px;
+        }
+        
+        .cta-box .cta-button:hover {
+            background: #f0f0f0;
+        }
+        
+        .quick-stat {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-top: 4px solid #FF6B35;
+        }
+        
+        .quick-stat .stat-number {
+            font-size: 2.5em;
+            color: #FF6B35;
+            font-weight: bold;
+            display: block;
+        }
+        
+        strong {
+            color: #1a1a1a;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 20px 15px;
+            }
+            .blog-article h1 {
+                font-size: 1.8em;
+            }
+            .blog-article h2 {
+                font-size: 1.5em;
+            }
+            .hero-image {
+                height: 250px;
+            }
+            .content-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <article class="blog-article">
+            <a href="index.html" style="display: inline-block; color: #FF6B35; text-decoration: none; margin-bottom: 20px; font-weight: 600;">← Back to Blog</a>
+            <h1>What is EV in Sports Betting? Your Guide to Expected Value</h1>
+            
+            <div class="blog-meta">
+                <span>Last Updated: February 2025</span> | <span>6 min read</span>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop" alt="Sports betting analysis" class="hero-image">
+
+            <p>If you're serious about sports betting, you've heard the term "EV" thrown around. But what does it actually mean? <strong>Expected Value (EV)</strong> is the math that separates profitable bettors from everyone else.</p>
+
+            <p>Think of EV as your betting GPS — it guides you toward long-term profitability instead of just hoping for wins.</p>
+
+            <div class="cta-box">
+                <h3>🎯 Ready to Find +EV Bets Automatically?</h3>
+                <p>Join thousands of smart bettors using data-driven tools to maximize profits</p>
+                <a href="https://landmarkbets.com" class="cta-button">Start Finding +EV Bets →</a>
+            </div>
+
+            <h2>What is Expected Value?</h2>
+            
+            <p><strong>Expected Value (EV)</strong> tells you the average amount you'll win or lose on a bet over time. It's the single most important number in sports betting.</p>
+
+            <div class="quick-stat">
+                <span class="stat-number">~95%</span>
+                <p>of sports bettors lose money long-term by ignoring EV</p>
+            </div>
+
+            <h2>The Simple Math</h2>
+
+            <p>Don't worry — you don't need to be a math genius. Here's the formula:</p>
+
+            <div class="formula">
+                EV = (Win % × Profit) - (Loss % × Risk)
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1554224311-beee910c1ftf?w=800&auto=format&fit=crop" alt="Calculator and betting analysis" class="content-image">
+
+            <div class="example-box">
+                <h4>📊 Real Example</h4>
+                <p>You bet <strong>$100 on the Chiefs at +150 odds</strong>. You estimate they have a 50% chance to win.</p>
+                
+                <p>
+                <strong>Calculation:</strong><br>
+                EV = (0.50 × $150) - (0.50 × $100)<br>
+                EV = $75 - $50<br>
+                <strong>EV = +$25</strong>
+                </p>
+                
+                <p>Translation: You make <strong>$25 profit per $100 bet</strong> over time. That's a 25% return!</p>
+            </div>
+
+            <h2>Positive vs. Negative EV</h2>
+
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop" alt="Winning and losing in betting" class="content-image">
+
+            <h3>✅ Positive EV (+EV)</h3>
+            <p>These are bets where the odds are better than the true probability. <strong>+EV bets make you money long-term.</strong></p>
+
+            <ul>
+                <li>The sportsbook undervalues the outcome</li>
+                <li>You have an edge over the bookmaker</li>
+                <li>Profitable over time (even with losses along the way)</li>
+            </ul>
+
+            <h3>❌ Negative EV (-EV)</h3>
+            <p>Most bets at sportsbooks are -EV. This is how they make money — the odds are tilted in their favor.</p>
+
+            <ul>
+                <li>The "vig" (typically 10%) is built into every line</li>
+                <li>Guaranteed to lose you money over time</li>
+                <li>Even if you win, it was still the wrong bet mathematically</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Pro Tip:</strong> Focus on making +EV bets consistently, not winning every single bet. The math works out over time.</p>
+            </div>
+
+            <h2>Win Rate Doesn't Matter (As Much As You Think)</h2>
+
+            <p>Here's the surprise: <strong>you can be profitable winning less than 50% of your bets</strong> if you're finding +EV.</p>
+
+            <div class="example-box">
+                <h4>🔥 The Paradox</h4>
+                <p><strong>Bettor A:</strong> Wins 60% at -110 odds → <strong>+14.5% ROI</strong></p>
+                <p><strong>Bettor B:</strong> Wins 40% at +250 odds → <strong>+40% ROI</strong></p>
+                
+                <p style="margin-top: 15px;">Bettor B makes nearly 3x more profit with a <em>lower</em> win rate by finding better +EV spots.</p>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&auto=format&fit=crop" alt="Sports betting strategy" class="content-image">
+
+            <h2>How to Find +EV Bets</h2>
+
+            <h3>1. Line Shopping</h3>
+            <p>Different sportsbooks offer different odds. A bet might be -EV at one book but +EV at another. Always shop for the best line.</p>
+
+            <h3>2. Use Odds Comparison Tools</h3>
+            <p>Software can scan thousands of games across dozens of sportsbooks in seconds to find +EV opportunities.</p>
+
+            <h3>3. Exploit Market Inefficiencies</h3>
+            <p>Look for edges in less popular markets, early lines, or when public bias skews the odds.</p>
+
+            <h3>4. Promotional Offers</h3>
+            <p>Profit boosts and bonuses can turn -EV bets into +EV gold mines when used strategically.</p>
+
+            <div class="cta-box">
+                <h3>💰 Stop Guessing, Start Winning</h3>
+                <p>Our tools automatically find +EV bets across 20+ sportsbooks in real-time</p>
+                <a href="https://landmarkbets.com" class="cta-button">Get Started Free →</a>
+            </div>
+
+            <h2>Common Mistakes to Avoid</h2>
+
+            <h3>🚫 Poor Bankroll Management</h3>
+            <p>Never bet more than 1-5% of your bankroll on a single wager, no matter how +EV it looks.</p>
+
+            <h3>🚫 Overestimating Your Edge</h3>
+            <p>Be conservative with your probability estimates. Overconfidence is expensive.</p>
+
+            <h3>🚫 Chasing Losses</h3>
+            <p>You'll have losing streaks even with perfect +EV betting. Trust the math and stay patient.</p>
+
+            <h3>🚫 Not Tracking Results</h3>
+            <p>Without records, you can't verify if your strategy actually works. Track everything.</p>
+
+            <img src="https://images.unsplash.com/photo-1559511260-66a654ae982a?w=800&auto=format&fit=crop" alt="Long-term betting success" class="content-image">
+
+            <h2>The Long Game</h2>
+
+            <p>EV betting isn't about getting rich quick. Here's what to expect:</p>
+
+            <div class="highlight-box">
+                <p><strong>Short-term:</strong> High variance. You might be up or down significantly.</p>
+                <p><strong>Medium-term:</strong> Results start matching your expected value.</p>
+                <p><strong>Long-term:</strong> Your actual returns closely match your EV. Math wins.</p>
+            </div>
+
+            <h2>Get Started with EV Betting</h2>
+
+            <ol>
+                <li><strong>Open accounts at multiple sportsbooks</strong> for line shopping</li>
+                <li><strong>Use EV calculation tools</strong> to find profitable bets quickly</li>
+                <li><strong>Start small</strong> — bet 1-2% of your bankroll per wager</li>
+                <li><strong>Track every bet</strong> to verify your strategy works</li>
+                <li><strong>Be patient</strong> — EV compounds over time</li>
+            </ol>
+
+            <div class="cta-box">
+                <h3>🚀 Join the Winning Side</h3>
+                <p>Most bettors lose. Smart bettors use data. Which one are you?</p>
+                <a href="https://landmarkbets.com" class="cta-button">Start Your Free Trial →</a>
+            </div>
+
+            <h2>Final Thoughts</h2>
+
+            <p>Expected Value transforms sports betting from gambling into strategic investing. While recreational bettors chase wins, professionals focus on making mathematically sound +EV decisions.</p>
+
+            <p><strong>Every bet either helps or hurts your long-term profitability.</strong> By understanding and applying EV, you join the small percentage of bettors who actually make money.</p>
+
+            <div class="highlight-box">
+                <p><strong>Ready to take action?</strong> The edge is out there — you just need the right tools to find it consistently. <a href="https://landmarkbets.com" style="color: #FF6B35; font-weight: bold;">Start finding +EV bets now →</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
