@@ -218,6 +218,25 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
+        .logo-header {
+            text-align: center;
+            padding: 30px 20px 20px;
+        }
+
+        .logo-header a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-header a:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-header img {
+            height: 60px;
+            width: auto;
+        }
+
         @media (max-width: 768px) {
             .blog-header h1 {
                 font-size: 36px;
@@ -235,11 +254,20 @@
             .cta-section h2 {
                 font-size: 28px;
             }
+
+            .logo-header img {
+                height: 50px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="blog-container">
+        <div class="logo-header">
+            <a href="https://landmarkbets.com/">
+                <img src="logo.png" alt="Landmark Bets">
+            </a>
+        </div>
         <div class="blog-header">
             <h1>📚 Betting Knowledge Hub</h1>
             <p>Master the fundamentals of sharp sports betting with expert insights and proven strategies.</p>
