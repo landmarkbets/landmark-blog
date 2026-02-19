@@ -1,0 +1,73 @@
+/* WCAG 2.1 Level AA Accessibility Fixes */
+
+/* 1. Skip Navigation Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 2. Improved Color Contrast - Darker orange for links */
+a, .read-more {
+    color: #D04A1A !important; /* Darker orange 4.5:1 contrast ratio */
+}
+
+.article-category {
+    background: #D04A1A !important;
+}
+
+.cta-button {
+    color: #D04A1A !important;
+}
+
+/* 3. Visible Focus Indicators */
+a:focus, button:focus, .article-card:focus {
+    outline: 3px solid #D04A1A;
+    outline-offset: 2px;
+}
+
+/* 4. Better focus for cards */
+.article-card {
+    cursor: pointer;
+}
+
+.article-card:focus-within {
+    outline: 3px solid #D04A1A;
+    outline-offset: 2px;
+}
+
+/* 5. Ensure sufficient contrast for all text */
+.blog-meta, .article-date {
+    color: #595959 !important; /* Darker gray for better contrast */
+}
+
+/* 6. Make clickable areas larger (44x44px minimum) */
+.cta-button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 7. Screen reader only text for better link context */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
