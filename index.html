@@ -70,7 +70,7 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            
+            cursor: pointer;
             border: 2px solid transparent;
         }
 
@@ -278,27 +278,6 @@
                 font-size: 28px;
             }
         }
-    
-        .article-title-link {
-            color: #1a1a1a;
-            text-decoration: none;
-            display: block;
-        }
-
-        .article-title-link:hover {
-            color: #D04A1A;
-        }
-
-        .article-title-link:focus {
-            outline: 3px solid #D04A1A;
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        /* Remove Read More links - title is now the main link */
-        .read-more {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -317,7 +296,7 @@
         <main id="main-content">
         <div class="articles-grid" role="list">
             <!-- Featured Article: Expected Value -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop" alt="Expected Value in Sports Betting">
                 </div>
@@ -327,7 +306,7 @@
                         <span class="article-category">Strategy</span>
                         <span class="article-date">Jan 15, 2025</span>
                     </div>
-                    <h2 class="article-title"><a href="ev-betting.html" class="article-title-link">What is Expected Value (EV) in Sports Betting?</a></h2>
+                    <h2 class="article-title">What is Expected Value (EV) in Sports Betting?</h2>
                     <p class="article-excerpt">Learn how professional bettors use Expected Value to identify profitable betting opportunities and build long-term winning strategies.</p>
                     <div class="article-footer">
                         <span class="read-time">5 min read</span>
@@ -337,7 +316,7 @@
             </div>
 
             <!-- Line Shopping -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop" alt="Line Shopping Guide">
                 </div>
@@ -346,7 +325,7 @@
                         <span class="article-category">Fundamentals</span>
                         <span class="article-date">Jan 12, 2025</span>
                     </div>
-                    <h2 class="article-title"><a href="line-shopping.html" class="article-title-link">The Complete Guide to Line Shopping</a></h2>
+                    <h2 class="article-title">The Complete Guide to Line Shopping</h2>
                     <p class="article-excerpt">Discover why line shopping across multiple sportsbooks is the easiest way to increase your profitability without changing your strategy.</p>
                     <div class="article-footer">
                         <span class="read-time">6 min read</span>
@@ -356,7 +335,7 @@
             </div>
 
             <!-- Win Rate Paradox -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800&auto=format&fit=crop" alt="Win Rate Paradox">
                 </div>
@@ -365,7 +344,7 @@
                         <span class="article-category">Strategy</span>
                         <span class="article-date">Feb 18, 2026</span>
                     </div>
-                    <h2 class="article-title"><a href="win-rate-paradox.html" class="article-title-link">The Win Rate Paradox: Why Lower Win Rates Can Mean Higher Profits</a></h2>
+                    <h2 class="article-title">The Win Rate Paradox: Why Lower Win Rates Can Mean Higher Profits</h2>
                     <p class="article-excerpt">Discover why a 40% win rate can be more profitable than 60%. Learn how Expected Value trumps win percentage and why sharp bettors focus on ROI, not wins.</p>
                     <div class="article-footer">
                         <span class="read-time">7 min read</span>
@@ -375,7 +354,7 @@
             </div>
 
             <!-- Closing Line Value -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=800&auto=format&fit=crop" alt="Closing Line Value">
                 </div>
@@ -384,7 +363,7 @@
                         <span class="article-category">Advanced</span>
                         <span class="article-date">Jan 8, 2025</span>
                     </div>
-                    <h2 class="article-title"><a href="closing-line-value.html" class="article-title-link">Understanding Closing Line Value (CLV)</a></h2>
+                    <h2 class="article-title">Understanding Closing Line Value (CLV)</h2>
                     <p class="article-excerpt">Why getting better odds than the closing line is the single best indicator of long-term betting success.</p>
                     <div class="article-footer">
                         <span class="read-time">5 min read</span>
@@ -394,7 +373,7 @@
             </div>
 
             <!-- Sharp vs Square -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop" alt="Sharp vs Square Betting">
                 </div>
@@ -403,7 +382,7 @@
                         <span class="article-category">Education</span>
                         <span class="article-date">Jan 5, 2025</span>
                     </div>
-                    <h2 class="article-title"><a href="sharp-vs-square.html" class="article-title-link">Sharp vs Square: What's the Difference?</a></h2>
+                    <h2 class="article-title">Sharp vs Square: What's the Difference?</h2>
                     <p class="article-excerpt">Learn the key differences between professional sharp bettors and recreational square bettors, and which habits to adopt.</p>
                     <div class="article-footer">
                         <span class="read-time">4 min read</span>
@@ -413,7 +392,7 @@
             </div>
 
             <!-- Positive EV Betting -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&auto=format&fit=crop" alt="Positive EV Betting">
                 </div>
@@ -422,7 +401,7 @@
                         <span class="article-category">Strategy</span>
                         <span class="article-date">Jan 3, 2025</span>
                     </div>
-                    <h2 class="article-title"><a href="finding-positive-ev.html" class="article-title-link">How to Find Positive EV Bets Every Day</a></h2>
+                    <h2 class="article-title">How to Find Positive EV Bets Every Day</h2>
                     <p class="article-excerpt">A practical guide to identifying and capitalizing on positive expected value betting opportunities in real-time.</p>
                     <div class="article-footer">
                         <span class="read-time">8 min read</span>
@@ -432,7 +411,7 @@
             </div>
 
             <!-- Bankroll Management -->
-            <article class="article-card" role="article">
+            <div class="article-card">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop" alt="Bankroll Management">
                 </div>
@@ -441,7 +420,7 @@
                         <span class="article-category">Money Management</span>
                         <span class="article-date">Feb 18, 2026</span>
                     </div>
-                    <h2 class="article-title"><a href="bankroll-management.html" class="article-title-link">Bankroll Management: Protect Your Betting Capital</a></h2>
+                    <h2 class="article-title">Bankroll Management: Protect Your Betting Capital</h2>
                     <p class="article-excerpt">Learn proven bankroll management techniques that professional bettors use to survive downswings and maximize long-term growth.</p>
                     <div class="article-footer">
                         <span class="read-time">8 min read</span>
@@ -460,6 +439,17 @@
         </div>
     </div>
 
-    
+    <script>
+        // Make entire article cards clickable
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Find the read-more link within this card
+                const link = this.querySelector('.read-more');
+                if (link && link.href && !e.target.closest('.read-more')) {
+                    window.location.href = link.href;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
