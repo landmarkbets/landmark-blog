@@ -187,7 +187,34 @@
             transform: translateX(-5px);
         }
         
+        .logo-header {
+            text-align: center;
+            padding: 30px 20px 0;
+            background: white;
+        }
+
+        .logo-header a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-header a:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-header img {
+            height: 60px;
+            width: auto;
+        }
+        
         @media (max-width: 768px) {
+            .logo-header {
+                padding: 20px 15px 0;
+            }
+
+            .logo-header img {
+                height: 50px;
+            }
             .blog-article {
                 padding: 30px 15px;
             }
@@ -208,6 +235,11 @@
 </head>
 <body>
     <div class="scroll-container">
+        <div class="logo-header">
+            <a href="https://landmarkbets.com/">
+                <img src="logo.png" alt="Landmark Bets">
+            </a>
+        </div>
         <div class="blog-article">
             <a href="index.html" class="back-link">← Back to Blog</a>
             
